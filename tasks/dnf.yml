@@ -1,0 +1,13 @@
+- name: Install required packages
+  become: true
+  become_method: su
+  dnf:
+    name:
+      - yum-utils
+      - device-mapper-persistent-data
+      - lvm2
+      - unzip
+      - zip
+      - kernel-devel
+      - git
+    state: present

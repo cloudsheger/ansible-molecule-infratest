@@ -1,0 +1,14 @@
+---
+    - name: Update apt cache
+      become: true  # Run the task with root privileges
+      become_method: su
+      dnf:
+        update_cache: yes
+  
+    - name: Install Python 3.11
+      become: true
+      become_method: su
+      dnf:
+        name:
+          - python3.11
+        state: present
