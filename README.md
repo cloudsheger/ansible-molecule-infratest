@@ -37,7 +37,15 @@ Author Information
 
 An optional section for the role authors to include contact information, or a website (HTML is not allowed).
 
+## How to create role to init molecule
+```
+ansible-galaxy role init my_role
+cd my_role
+molecule init scenario --driver-name docker
+```
 ### How to run test
 ```
+molecule create
+molecule destroy
 molecule test
 ```
